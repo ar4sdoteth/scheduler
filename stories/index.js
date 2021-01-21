@@ -8,6 +8,9 @@ import InterviewerListItem from "../src/components/InterviewerListItem.js";
 import InterviewerList from "../src/components/InterviewerList.js";
 import "index.scss";
 import Button from "components/Button";
+import Appointment from "components/Appointment"
+import Header from "components/Appointment/Header"
+import Empty from "components/Appointment/Empty"
 
 const days = [
   {
@@ -59,7 +62,7 @@ storiesOf("Button", module)
   .add("Selected", () => <DayListItem name="Monday" spots={5} selected />) 
   .add("Full", () => <DayListItem name="Monday" spots={0} />)
   .add("Clickable", () => (
-    <DayListItem name="Tuesday" setDay={action("setDay")} spots={5} /> // action() allows us to create a callback that appears in the actions panel when clicked
+    <DayListItem name="Tuesday" setDay={event => action("setDay")(day.id)} spots={5} /> // action() allows us to create a callback that appears in the actions panel when clicked
   ));
 
   storiesOf("DayList", module)
@@ -97,7 +100,7 @@ storiesOf("Button", module)
       id={interviewer.id}
       name={interviewer.name}
       avatar={interviewer.avatar}
-      setInterviewer={action("setInterviewer")}
+      setInterviewer={event => action("setInterviewer")(interviewer.id)}
     />
   ));
 
@@ -126,3 +129,24 @@ storiesOf("Button", module)
         setInterviewer={action("setInterviewer")}
       />
     ));
+
+  storiesOf("Appointment", module)
+    .addParameters({
+        backgrounds: [{ name: "white", value: "#fff", default: true }]
+      })
+    .add("Appointment", () => <Appointment />)
+    .add("Appointment with Time", () => (
+        <Appointment
+          time='12pm'
+        />
+      ))
+    .add("Header", () => 
+        <Header
+          time='12pm'
+        />
+      )
+    .add("Empty", () => 
+        <Empty
+        onAdd={action("onAdd")}
+        />  
+      )
