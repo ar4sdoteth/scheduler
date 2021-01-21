@@ -6,9 +6,20 @@ import Empty from './Empty'
 
 
 
-export default function Appointment () {
-
+export default function Appointment (props) {
+  console.log(props)
   return (
-    <article className="appointment"></article>
+    <>
+      <article className="appointment"></article>
+      <Header time={props.time} />
+      {props.interview ? (
+        <Show
+          student={props.interview.student}
+          interviewer={props.interview.interviewer.name}
+        />
+      ) : (
+        <Empty />
+      )}
+    </>
   )
 }
