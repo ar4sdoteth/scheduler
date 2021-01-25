@@ -130,7 +130,7 @@ export default function Application(props) {
           
       </section>
       <section className="schedule">
-        {/* {dailyAppointments} */}
+        {/* {schedule} */}
         {dailyAppointments
         .map((appointment) => {
             return <Appointment key={appointment.id} {...appointment} />;
