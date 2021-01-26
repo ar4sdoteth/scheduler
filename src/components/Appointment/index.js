@@ -10,6 +10,7 @@ import Confirm from './Confirm'
 import Error from './Error'
 import useVisualMode from '../../hooks/useVisualMode'
 
+//Modes
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
 const CREATE = "CREATE";
@@ -21,26 +22,10 @@ const ERROR_SAVE = "ERROR_SAVE";
 const ERROR_DELETE = "ERROR_DELETE";
 
 export default function Appointment (props) {
-  console.log(`from Appointment:interview`, props.interview)
 
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
   );
-
-  // useEffect(() => {
-  //   if (props.interview && mode === EMPTY) {
-  //     transition(SHOW);
-  //   }
-  // }, [transition, mode, props.interview])
-
-  // function save(name, interviewer) {
-  //   const interview = {
-  //     student: name,
-  //     interviewer
-  //   };
-  //   console.log(`from save`, interview)
-  //   props.bookInterview(props.id, interview)
-  // }
 
   function save(name, interviewer) {
     const interview = {

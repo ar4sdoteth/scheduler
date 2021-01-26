@@ -33,7 +33,6 @@ export default function Application(props) {
   );
 
   
-  console.log(`After useEffect`, state)
   return (
     <main className="layout">
       <section className="sidebar">
