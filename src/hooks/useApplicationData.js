@@ -5,6 +5,7 @@ export default function useApplicationData() {
 
   const setDay = (day) => setState({ ...state, day });
 
+  //Global state
   const [state, setState] = useState({
     day: "Monday",
     days: [],
@@ -12,13 +13,13 @@ export default function useApplicationData() {
     interviewers: {}
   });
 
+  //API calls
   useEffect(() => {
     Promise.all([
       axios.get('/api/days'),
       axios.get('/api/appointments'),
       axios.get('/api/interviewers'),
     ]).then((all) => {
-      // const [days, appointments, interviewers] = all;
       setState((prev) => ({
         ...prev,
         days: all[0].data,

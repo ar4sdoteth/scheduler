@@ -28,14 +28,12 @@ const getInterview = function(state, interview) {
 
 const getInterviewersForDay = function(state, day) {
 
-  // console.log(`state.interviewers`, state.interviewers)
-  // console.log(`state.days`, state.days)
   const filteredDay = state.days.filter(curDay => curDay.name === day)
   
   if (filteredDay.length === 0) {
     return filteredDay
   }
-  // console.log(`filteredDay`, filteredDay)
+
   return filteredDay[0].interviewers.map((interviewer) => {
     return state.interviewers[interviewer]
   })

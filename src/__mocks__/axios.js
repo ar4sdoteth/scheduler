@@ -53,6 +53,7 @@ const fixtures = {
   }
 };
 
+// Mock API Requests
 export default {
   defaults: { baseURL: "" },
   get: jest.fn(url => {

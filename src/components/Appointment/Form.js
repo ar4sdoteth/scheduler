@@ -3,6 +3,7 @@ import InterviewerList from '../InterviewerList'
 import Button from '../Button'
 
 export default function Form(props) {
+
   const [name, setName] = useState(props.name || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
@@ -39,9 +40,6 @@ export default function Form(props) {
             type="text"
             placeholder="Enter Student Name"
             data-testid="student-name-input"
-            /*
-              This must be a controlled component
-            */
           />
         </form>
         <section className="appointment__validation">{error}</section>

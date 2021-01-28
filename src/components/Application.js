@@ -3,7 +3,7 @@ import DayList from './DayList'
 import "components/Application.scss";
 import Appointment from "components/Appointment/"
 import useApplicationData from "../hooks/useApplicationData";
-import { getAppointmentsForDay, getInterview, getInterviewersForDay }from '../helpers/selectors'
+import { getAppointmentsForDay, getInterview, getInterviewersForDay } from '../helpers/selectors'
 
 
 export default function Application(props) {
@@ -17,6 +17,7 @@ export default function Application(props) {
 
   const interviewers = getInterviewersForDay(state, state.day);
 
+  //Send appointment with props (for Form)
   const appointments = getAppointmentsForDay(state, state.day).map(
     appointment => {
       return (
