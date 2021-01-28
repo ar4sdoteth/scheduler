@@ -7,7 +7,7 @@ import Form from "components/Appointment/Form";
 // fireEvent.click(getByText("Save"));
 afterEach(cleanup);
 
-describe("Form tests", () => {
+describe("Form", () => {
   const interviewers = [
     {
       id: 1,

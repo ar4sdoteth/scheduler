@@ -52,7 +52,7 @@ export default function useApplicationData() {
         return day;
       }
     });
-    // return { ...state, appointments}
+
     return axios.put(`/api/appointments/${id}`, appointment).then(() => {
       return setState({ ...state, appointments, days });
     })
