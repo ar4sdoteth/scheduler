@@ -5,6 +5,16 @@ Tech Stack: ReactJS, PostgreSQL, Webpack, Axios, Jest, React Testing Library, St
 
 ## Final Product 
 
+When first visiting the App:
+!["Main Page"](https://github.com/ar4sdoteth/scheduler/blob/master/Docs/scheduler-main.png)
+
+Booking an Interview:
+!["Book Interview"](https://github.com/ar4sdoteth/scheduler/blob/master/Docs/appointment-form.png)
+
+Deleting an Interview:
+!["Deleting"](https://github.com/ar4sdoteth/scheduler/blob/master/Docs/appointment-form.png)
+
+
 
 ## Setup
 
@@ -27,3 +37,12 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## Dependencies
+
+- Axios
+- Classnames
+- Normalize.css
+- React
+- React-dom
+- React-scripts
