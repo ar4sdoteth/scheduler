@@ -12,7 +12,7 @@ Booking an Interview:
 !["Book Interview"](https://github.com/ar4sdoteth/scheduler/blob/master/Docs/appointment-form.png)
 
 Deleting an Interview:
-!["Deleting"](https://github.com/ar4sdoteth/scheduler/blob/master/Docs/appointment-form.png)
+!["Deleting"](https://github.com/ar4sdoteth/scheduler/blob/master/Docs/appointment-delete.png)
 
 
 
